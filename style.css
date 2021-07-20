@@ -1,0 +1,56 @@
+/* import new font from google front : https://fonts.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+/* CSS variables : https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+  --main-font-color: rgb(30, 120, 172);
+  --second-font-color: rgb(207, 47, 47);
+  --error-color: rgb(215, 67, 56);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#welcoming {
+  font-size: 80px;
+  text-align: center;
+  color: var(--main-font-color);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+img {
+  width: 100%;
+}
+
+.box1 {
+  background-color: var(--error-color);
+  text-align: center;
+  color: aliceblue;
+  padding: 18px;
+}
+
+/* media queries : if the width of the screen is less than 500px applie the css inside this media queries */
+@media (max-width: 500px) {
+  .content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  #welcoming {
+    font-size: 40px;
+    padding: 25px;
+    color: var(--second-font-color);
+  }
+
+  .box1 {
+    display: none;
+  }
+}
